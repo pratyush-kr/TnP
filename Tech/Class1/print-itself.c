@@ -3,7 +3,6 @@
 
 int main()
 {
-    //Class1
     FILE *file;
     file = fopen("add-2-nos.out", "r");
     char ch;
