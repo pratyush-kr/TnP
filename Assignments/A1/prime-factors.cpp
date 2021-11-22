@@ -33,8 +33,13 @@ int main()
     for(int i=0; i*i<=n; i++)
         if(n%primes[i] == 0)
             primeFactor.push_back(primes[i]);
-    for(auto factor : primeFactor)
-        cout<<factor<<' ';
+    if(primeFactor.size() == 0)
+        cout<<n;
+    else
+    {
+        for(auto factor : primeFactor)
+            cout<<factor<<' ';
+    }
     cout<<'\n';
     return 0;
 }
