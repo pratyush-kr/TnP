@@ -20,20 +20,22 @@ int fibonnaci(int n)
 
 int main()
 {
+    map<int, bool> isFib;
     mp[1] = 0;
     mp[2] = 1;
-    cout<<fibonnaci(20)<<'\n';
-    int n;
+    mp[3] = 1;
+    fibonnaci(30);
+    for(auto x : mp)
+        isFib[x.second] = true;
+    int n, i=0;
     cin>>n;
-    int i=0,x=1;
-    while(i<=n)
+    int x=0;
+    while(i<n)
     {
-        if(mp[x]==0)
-        {
-            i++;
-            cout<<i<<' ';
-        }
+        if(isFib[x] == false)
+            cout<<x<<' ', i++;
         x++;
     }
+    cout<<'\n';
     return 0;
 }
